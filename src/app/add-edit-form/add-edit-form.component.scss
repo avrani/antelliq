@@ -1,0 +1,56 @@
+.darkness-platform {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    .pop-up-container {
+        position: fixed;
+        width: auto;
+        min-height: 100px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border-radius: 5px;
+        .header {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            min-height: 38px;
+            padding-right: 2px;
+            background-color: #2aa6f2;
+            color: white;
+            .title {
+                font-size: 16px;
+                line-height: 44px;
+                margin-left: 20px;
+                margin-right: 40px;
+            }
+        }
+        .form-container {
+            padding:20px;
+            .field {
+                padding: 3px;
+                input {
+                    float: right;
+                    margin-left:10px;
+                }
+            }
+        }
+        .footer {
+        
+            height: 30px;
+            background-color: #eaedef;
+            padding: 13px 13px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            button{
+                margin: 0 auto;
+                display: block
+            }
+        }
+    }
+}

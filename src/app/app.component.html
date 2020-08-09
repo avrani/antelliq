@@ -1,0 +1,40 @@
+
+<button (click)="addRow()" >Add New Row</button>
+<table>
+  <tr>
+    <th>Health Index</th>
+    <th>End Date</th>
+    <th>Min Value DateTime</th>
+    <th>Type</th>
+    <th>Cow Id</th>
+    <th>Animal Id</th>
+    <th>Event Id</th>
+    <th>Deletable</th>
+    <th>Lactation Number</th>
+    <th>Days In Lactation</th>
+    <th>Age In Days</th>
+    <th>Start Date Time</th>
+    <th>Reporting Date Time</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let row of rows;let i=index">
+    <td>{{row.healthIndex}} </td>
+    <td>{{row.endDate}} </td>
+    <td>{{row.minValueDateTime}} </td>
+    <td>{{row.type}} </td>
+    <td>{{row.cowId}} </td>
+    <td>{{row.animalId}} </td>
+    <td>{{row.eventId}} </td>
+    <td>{{row.deletable}} </td>
+    <td>{{row.lactationNumber}} </td>
+    <td>{{row.daysInLactation}} </td>
+    <td>{{row.ageInDays}} </td>
+    <td>{{row.startDateTime}} </td>
+    <td>{{row.reportingDateTime}} </td>
+    <td (click)="editRow(row)"><img class="trash" src="/assets/edit.svg"></td>
+    <td (click)="deleteRow(row.eventId)"><img class="trash" src="/assets/trash.svg"></td>
+  </tr>
+</table>
+<app-add-edit-form *ngIf="displayAddPopUp" (updateParentWithRowEvent)="addUpdateServer($event)" [title]="'Add'"></app-add-edit-form>
+<app-add-edit-form *ngIf="displayEditPopUp" (updateParentWithRowEvent)="editUpdateServer($event)" [rowData]="rowForEdit" [title]="'Edit'"></app-add-edit-form>

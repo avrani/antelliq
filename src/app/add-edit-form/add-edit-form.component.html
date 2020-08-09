@@ -1,0 +1,47 @@
+<div class="darkness-platform">
+    <div class="pop-up-container">
+        <div class="header">
+            <div class="title"> {{title}}</div>
+        </div>
+        <div class="form-container">
+            <div class="field">
+                <label>Health Index</label> <input type="text" [(ngModel)]="row.healthIndex">
+            </div>
+            <div class="field">
+                <label>End Date</label> <input type="text" [(ngModel)]="row.endDate">
+            </div>
+            <div class="field">
+                <label>Min Value DateTime</label> <input type="text" [(ngModel)]="row.minValueDateTime">
+            </div>
+            <div class="field">
+                <label>Type</label> <input type="text" [(ngModel)]="row.type">
+            </div>
+            <div class="field">
+                <label>Cow Id</label> <input type="text" [(ngModel)]="row.cowId">
+            </div>
+            <div class="field">
+                <label>Animal Id</label> <input type="text" [(ngModel)]="row.animalId">
+            </div>
+            <div class="field">
+                <label>Deletable</label> <input type="text" [(ngModel)]="row.deletable">
+            </div>
+            <div class="field">
+                <label>Lactation Number</label> <input type="text" [(ngModel)]="row.lactationNumber">
+            </div>
+            <div class="field">
+                <label>Days In Lactation</label> <input type="text" [(ngModel)]="row.daysInLactation">
+            </div>
+            <div class="field">
+                <label>Age In Days</label> <input type="text" [(ngModel)]="row.ageInDays">
+            </div>
+            <div class="field">
+                <label>Start Date Time</label> <input type="text" [(ngModel)]="row.startDateTime">
+            </div>
+            <div class="field">
+                <label>Reporting Date Time</label> <input type="text" [(ngModel)]="row.reportingDateTime">
+            </div>
+        </div>
+        <div class="footer">
+            <button (click)="save()">save</button>
+        </div>
+    </div>
